@@ -20,8 +20,7 @@ pipeline{
         stage("Package Maven"){
             steps{
                 //checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/tanzeelsultanrana/maven-java-samples.git']])
-                echo "before"
-                echo "after"
+                sh "mvn test"
             }
         }
     }
