@@ -1,0 +1,6 @@
+com\interloop\test\TestApplication.class
+com\interloop\test\model\Student.class
+com\interloop\test\controllers\StudentController.class
+com\interloop\test\impl\StudentDataServiceImpl.class
+com\interloop\test\repository\StudentRepository.class
+com\interloop\test\api\StudentDataService.class
