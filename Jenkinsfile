@@ -29,6 +29,11 @@ pipeline{
                 sh "mvn package"
                 echo "automation on next push"
             }
+            post {
+                always {
+                        // One or more steps need to be included within each condition's block.
+                        }
+                 }
         }
     }
 }
