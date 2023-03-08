@@ -27,6 +27,7 @@ pipeline{
             steps{
                 //checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/tanzeelsultanrana/maven-java-samples.git']])
                 sh "mvn package"
+                echo "automation on next push"
             }
         }
     }
