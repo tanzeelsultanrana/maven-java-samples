@@ -17,10 +17,16 @@ pipeline{
                 sh "mvn compile"
             }
         }
-        stage("Package Maven"){
+        stage("Test Maven"){
             steps{
                 //checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/tanzeelsultanrana/maven-java-samples.git']])
                 sh "mvn test"
+            }
+        }
+        stage("Package Maven"){
+            steps{
+                //checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/tanzeelsultanrana/maven-java-samples.git']])
+                sh "mvn package"
             }
         }
     }
