@@ -29,12 +29,6 @@ pipeline{
                 sh "mvn package"
                 echo "automation on next push"
             }
-            post {
-                always {
-                        junit 'target/surefire-reports/*.xml'
-                        }
-                        
-                 }
         }
     }
 }
