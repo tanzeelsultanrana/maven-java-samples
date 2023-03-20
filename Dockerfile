@@ -1,6 +1,6 @@
 
-# Use an official Java runtime as a parent image
-FROM openjdk:11-jre-slim-buster
+# Use an official Java runtime as a parent image 11-jre-slim-buster
+FROM openjdk:21-ea-11-slim-buster
 
 # Set the working directory to /app
 WORKDIR /app
