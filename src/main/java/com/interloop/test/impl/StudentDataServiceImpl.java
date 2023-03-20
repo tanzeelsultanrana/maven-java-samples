@@ -12,17 +12,17 @@ import com.interloop.test.model.Student;
 @Service
 public class StudentDataServiceImpl implements StudentDataService {
 
-    @Autowired
-    private StudentRepository studentRepository;
-
-    @Override
+    @Autowired                                      // this is autowiring for data service
+    private StudentRepository studentRepository;     //dependency injection within a project
+                                                         // Four - 4th
+    @Override         //these two functions are automatically override from data service
     public List<Student> fetchAllStudents(){
-        return studentRepository.findAll();
+        return studentRepository.findAll(); // this is define by us
     }
 
 
     @Override
     public void saveNew(Student student){
-        studentRepository.save(student);
+        studentRepository.save(student); // this is define by us
     }
 }

@@ -6,7 +6,7 @@ FROM openjdk:11-jre-slim-buster
 WORKDIR /app
 
 # Copy the application jar file into the container
-COPY target/myapp.jar /app/myapp.jar
+COPY target/test-1.0.0.jar /app/test-1.0.0.jar
 
 # Install Logstash and ssmtp packages
 RUN apt-get update && \
@@ -29,4 +29,4 @@ ENV LS_SETTINGS_DIR=/etc/logstash
 EXPOSE 5044
 
 # Run the application and Logstash
-CMD java -jar myapp.jar 2>&1 | tee /app/error.log | logstash -f /etc/logstash/conf.d/logstash.conf && cat /app/error.log | mail -s "Java Application Exception" youremail@example.com
+CMD java -jar test-1.0.0.jar 2>&1 | tee /app/error.log | logstash -f /etc/logstash/conf.d/logstash.conf && cat /app/error.log | mail -s "Java Application Exception" tanzeelsultanrana1@gmail.com

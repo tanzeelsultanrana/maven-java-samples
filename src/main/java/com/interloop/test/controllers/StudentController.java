@@ -7,16 +7,16 @@ import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMapping;     //Five -5th
 import org.springframework.web.bind.annotation.RestController;
 import com.interloop.test.model.*;
 import com.interloop.test.api.*;
 
-@RestController
+@RestController                           //
 @RequestMapping(value = "/student")
-public class StudentController {
+public class StudentController { //here we define whether we are going to use it as API,Front-End App, Or both
 
-    @Autowired
+    @Autowired // this is autowiring for data service
     StudentDataService dataService;
 
     @GetMapping("/all")
